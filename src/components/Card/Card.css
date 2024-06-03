@@ -37,9 +37,16 @@
     padding: 2px;
     color:#FFE6E6;
 }
-.Card_info{
+.Card_info {
     padding: 2px;
-}
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+  }
+  
+  
 
 .image {
     max-width: 100%; 
