@@ -1,7 +1,7 @@
 .Card_main{
     height: 300px;
     width: 250px;
-    background-color:#7469B6 ;
+    background-color:#028391 ;
     box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.3) ;
     border-radius: 20px;
     transition: 0.3s;
@@ -35,7 +35,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 2px;
-    color:#FFE6E6;
+    color:#F6DCAC;
 }
 .Card_info {
     padding: 2px;
