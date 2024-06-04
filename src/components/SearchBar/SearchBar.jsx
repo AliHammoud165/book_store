@@ -1,12 +1,10 @@
 import React, { useState, useRef } from 'react';
 import { SearchIcon } from '../assets/icons/searchicon';
-
-import {searchCriteria} from './data_searchby'
+import { searchCriteria } from './data_searchby';
 import './Searchbar.css';
 
-function SearchBar({ setSearchTerm }) {
+function SearchBar({ setSearchTerm, setSelectedCriterion, selectedCriterion }) {
   const [is_open, setIs_open] = useState(false);
-  const [selectedCriterion, setSelectedCriterion] = useState('Title');
   const inputRef = useRef(null);
 
   const handleSearchClick = () => {
@@ -24,7 +22,6 @@ function SearchBar({ setSearchTerm }) {
     setSelectedCriterion(criterion);
     setIs_open(false);
   };
-
 
   return (
     <div className="Searchbar_main_box">

@@ -25,12 +25,15 @@ public class BookController {
     }
 
     @GetMapping("/Book/Getbytitle")
-    public List<Book> findbytitle(@RequestParam String title) {
-        return bookRepository.findByTitleContaining(title);
+    public Page<Book>findbytitle(@RequestParam String title,@RequestParam int page,@RequestParam int size) {
+        return bookService.findByTitle(title,page,size);
     }
 
 
-
+    @GetMapping("/books/by-author")
+    public Page<Book> getBooksByAuthorName(@RequestParam String authorName, @RequestParam int page, @RequestParam int size) {
+        return bookService.getBooksByAuthorName(authorName, page, size);
+    }
 
 
 }

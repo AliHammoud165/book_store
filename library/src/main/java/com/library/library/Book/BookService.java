@@ -17,4 +17,14 @@ public Page<Book> getBook(int page,int size){
     Pageable pageable= PageRequest.of(page,size);
     return bookRepository.findAll(pageable);
 }
+    public Page<Book> getBooksByAuthorName(String authorName, int page, int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        return bookRepository.findByAuthorName(authorName, pageable);
+    }
+
+    public Page<Book> findByTitle(String title, int page, int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        return bookRepository.findByTitleContaining(title, pageable);
+    }
+
 }
