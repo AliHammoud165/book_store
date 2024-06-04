@@ -15,13 +15,14 @@
 
 .Search_input_main{
     height: 50%;
-    width: 70%;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: white;
     border-radius: 20px;
-    padding: 2px 5px 2px 5px; /* Top, right, bottom, left */
+    padding: 2px 5px 2px 5px; 
+
 
 }
 
@@ -58,4 +59,18 @@
 .button_search:hover{
 background-color: #F6DCAC;
 color: black;
+}
+.Search_by_container{
+background-color: #F6DCAC;
+height: 50%;
+width: 5%;
+align-content: center;
+text-align: center;
+margin-right: 20px;
+cursor: pointer;
+border-radius: 20px;
+}
+
+.dropdown_menu{
+    background-color: #F6DCAC;
 }
