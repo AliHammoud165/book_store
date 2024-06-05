@@ -9,14 +9,14 @@ public class BookMapper {
             return null;
         }
 
-        String authorName = (book.getAuthor() != null) ? book.getAuthor().getName() : null;
 
         return new BookTDO(
+                book.getId(),
                 book.getNb_page(),
                 book.getTitle(),
                 book.getBook_cover(),
                 book.getInfo(),
-                authorName
+                book.getAuthor()
         );
     }
 
@@ -31,7 +31,8 @@ public class BookMapper {
         book.setTitle(bookTDO.title());
         book.setBook_cover(bookTDO.bookCover());
         book.setInfo(bookTDO.info());
-        book.setAuthor(author);
+        book.setBook_cover(bookTDO.bookCover());
+
 
         return book;
     }

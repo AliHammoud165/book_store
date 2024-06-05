@@ -91,7 +91,7 @@ function MainPage() {
           <Card
             key={book.id}
             title={book.title}
-            image={book.book_cover}
+            image={book.bookCover}
             page={book.nb_page}
             info={book.info}
             name={book.author.name}

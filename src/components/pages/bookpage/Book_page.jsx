@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import './book_page.css';
+import { StarRating } from '../../Stars/stars';
 
 function Book_page() {
   const { id } = useParams(); // Get the id from the URL
@@ -45,6 +46,7 @@ function Book_page() {
         <div className="book_page_author">By : {book.author.name}</div>
         <div className="page_nb">{book.nb_page} pages</div>
         <div className="book_page_info">{book.info}</div>
+        <div className="rating"><StarRating rating={book.rating}/></div>
       </div>
     </div>
   );

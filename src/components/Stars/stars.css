@@ -1,0 +1,18 @@
+.star-rating {
+    color: #ffd700; /* Default star color */
+    font-size: 1.2em; /* Adjust the size of stars */
+  }
+  
+  /* Customize star colors here if needed */
+  .star-rating .fas.fa-star {
+    color: #ffd700; /* Full star color */
+  }
+  
+  .star-rating .fas.fa-star-half-alt {
+    color: #ffd700; /* Half star color */
+  }
+  
+  .star-rating .far.fa-star {
+    color: #d3d3d3; /* Empty star color */
+  }
+  

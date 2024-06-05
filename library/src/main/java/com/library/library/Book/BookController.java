@@ -16,8 +16,8 @@ public class BookController {
     }
 
     @GetMapping("/Book/get")
-    public Page<Book> getBooks(@RequestParam int page, @RequestParam int size) {
-        return bookService.getBook(page, size);
+    public Page<BookTDO> getBooks(@RequestParam int page, @RequestParam int size) {
+        return bookService.getBooks(page, size);
     }
     @PostMapping("/Book/Add")
     public void addBook(@RequestBody Book book) {
@@ -25,13 +25,13 @@ public class BookController {
     }
 
     @GetMapping("/Book/Getbytitle")
-    public Page<Book>findbytitle(@RequestParam String title,@RequestParam int page,@RequestParam int size) {
+    public Page<BookTDO>findbytitle(@RequestParam String title,@RequestParam int page,@RequestParam int size) {
         return bookService.findByTitle(title,page,size);
     }
 
 
     @GetMapping("/books/by-author")
-    public Page<Book> getBooksByAuthorName(@RequestParam String authorName, @RequestParam int page, @RequestParam int size) {
+    public Page<BookTDO> getBooksByAuthorName(@RequestParam String authorName, @RequestParam int page, @RequestParam int size) {
         return bookService.getBooksByAuthorName(authorName, page, size);
     }
 

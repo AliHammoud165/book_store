@@ -6,6 +6,8 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.lang.NonNull;
 
+import java.time.LocalDate;
+
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
@@ -25,9 +27,33 @@ public class Book {
 
     private String Info;
 
+    private Double Rating;
+
+    private String Language;
+
+    private LocalDate PublicationDate;
+
+    private String ISBN;
+
+
+
+
+
     @ManyToOne
     @JoinColumn(name = "author_id")
     private Author author;
+
+    public Book(int nb_page, @NonNull String title, @NonNull String book_cover, String info, Double rating, String language, LocalDate publicationDate, String ISBN, Author author) {
+        Nb_page = nb_page;
+        Title = title;
+        Book_cover = book_cover;
+        Info = info;
+        Rating = rating;
+        Language = language;
+        PublicationDate = publicationDate;
+        this.ISBN = ISBN;
+        this.author = author;
+    }
 
     // Getters and Setters
     public Integer getId() {
@@ -76,5 +102,37 @@ public class Book {
 
     public void setAuthor(Author author) {
         this.author = author;
+    }
+
+    public Double getRating() {
+        return Rating;
+    }
+
+    public void setRating(Double rating) {
+        Rating = rating;
+    }
+
+    public String getLanguage() {
+        return Language;
+    }
+
+    public void setLanguage(String language) {
+        Language = language;
+    }
+
+    public LocalDate getPublicationDate() {
+        return PublicationDate;
+    }
+
+    public void setPublicationDate(LocalDate publicationDate) {
+        PublicationDate = publicationDate;
+    }
+
+    public String getISBN() {
+        return ISBN;
+    }
+
+    public void setISBN(String ISBN) {
+        this.ISBN = ISBN;
     }
 }
