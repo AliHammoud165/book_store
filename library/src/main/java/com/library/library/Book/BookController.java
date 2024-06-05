@@ -3,7 +3,7 @@ package com.library.library.Book;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class BookController {
@@ -34,6 +34,10 @@ public class BookController {
     public Page<Book> getBooksByAuthorName(@RequestParam String authorName, @RequestParam int page, @RequestParam int size) {
         return bookService.getBooksByAuthorName(authorName, page, size);
     }
+
+    @GetMapping("/book/by_id")
+    public Optional<Book> getBookById(@RequestParam Integer Id){
+        return bookRepository.findById(Id);    }
 
 
 }

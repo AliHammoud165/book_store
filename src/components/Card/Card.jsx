@@ -1,10 +1,19 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Card.css';
 
-function Card({ title,name,page,info,image }) {
+function Card({ id, title, name, page, info, image }) {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    console.log(`id:${id},Name: ${name}`);
+    navigate(`/book/${id}`); 
+    
+  };
+
   return (
     <>
-      <div className="Card_main">
+      <div className="Card_main" onClick={handleClick}>
         <div className="image_card">
           <img className='image' src={image} alt="" />
         </div>

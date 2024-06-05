@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { SearchBar } from '../SearchBar/SearchBar';
-import { Card } from '../Card/Card';
+import { SearchBar } from '../../SearchBar/SearchBar';
+import { Card } from '../../Card/Card';
 import './main_page.css';
 
 function MainPage() {
@@ -95,6 +95,7 @@ function MainPage() {
             page={book.nb_page}
             info={book.info}
             name={book.author.name}
+            id={book.id}
           />
         ))}
       </div>

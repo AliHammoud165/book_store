@@ -1,0 +1,46 @@
+.main_book_page_continer {
+    height: 100vh;
+    width: 90%;
+    display: flex;
+    padding: 30px;
+}
+
+.book_page_image {
+    height: 100%;
+    width: 35%;
+    display: flex; 
+    justify-content: flex-end; 
+}
+
+.main_image {
+    width: 50%; 
+    height: 40%;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+.main_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.book_page_content{
+    padding-left: 100px;
+    width: 45%;
+}
+
+.book_Page_title{
+    font-size: 25px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.book_page_author{
+    color:blue;
+}
+
+.book_page_info{
+    padding-top: 20px;
+}

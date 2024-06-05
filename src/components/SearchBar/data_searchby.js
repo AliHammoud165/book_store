@@ -1,2 +1,2 @@
-const searchCriteria = ['Title', 'Author', 'Genara'];
+const searchCriteria = ['Title', 'Author'];
 export{searchCriteria}

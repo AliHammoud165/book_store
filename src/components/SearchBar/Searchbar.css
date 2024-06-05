@@ -73,4 +73,6 @@ border-radius: 20px;
 
 .dropdown_menu{
     background-color: #F6DCAC;
+    width: fit-content;
+    height: 60px;
 }
